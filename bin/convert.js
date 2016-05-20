@@ -23,7 +23,11 @@ module.exports = function(content, file, conf){
     
     let dpi2 = [];
     let dpi3 = [];
-    
+
+    /**
+     * 这里即使是空的css 也会解析出rules
+     *
+     */
     rules.forEach(function (item) {
 
         if (item.type !== 'rule') {
@@ -48,6 +52,13 @@ module.exports = function(content, file, conf){
         });
     });
 
+    /**
+     * 创建css规则
+     * 
+     * @param {string} selectors 
+     * @suffix {string} suffix 原来的font-size值后面的如 ' !important'
+     * @return {string}
+     */
     function create(selectors, suffix) {
         return '\r'
             + '    ' + selectors + ' {\r'
