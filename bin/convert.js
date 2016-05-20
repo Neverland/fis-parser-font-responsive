@@ -56,7 +56,7 @@ module.exports = function(content, file, conf){
      * 创建css规则
      * 
      * @param {string} selectors 
-     * @suffix {string} suffix 原来的font-size值后面的如 ' !important'
+     * @param {string} suffix 原来的font-size值后面的如 ' !important'
      * @return {string}
      */
     function create(selectors, suffix) {
