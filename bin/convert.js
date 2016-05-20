@@ -57,7 +57,7 @@ module.exports = function(content, file, conf){
      * 
      * @param {string} selectors 
      * @param {string} suffix 原来的font-size值后面的如 ' !important'
-     * @return {string}
+     * @return {string} style text
      */
     function create(selectors, suffix) {
         return '\r'
